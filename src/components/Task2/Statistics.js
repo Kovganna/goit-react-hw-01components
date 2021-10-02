@@ -1,45 +1,31 @@
-// import StatisticItem from "./StatisticItem"
+import PropTypes from 'prop-types';
 
-// const Statistics = ({stats=[]}) => {
-//     return (
-//         <ul>
-//             {stats.map(({id, label, percentage}) =>
-//             <li>
-//                 <StatisticItem
-//                 key = {id}
-//                 label={label}
-//                 percentage={percentage}
-//                 />,
-// {/*
-//                 <StatisticItem
-//                 key = {statisticalData.id[1]}
-//                 label={statisticalData.label[1]}
-//                 percentage={statisticalData.percentage[1]}
-//                 />,
-//                 <StatisticItem
-//                 key = {statisticalData.id[2]}
-//                 label={statisticalData.label[2]}
-//                 percentage={statisticalData.percentage[2]}
-//                 />,
-//                 <StatisticItem
-//                key = {statisticalData.id[3]}
-//                 label={statisticalData.label[3]}
-//                 percentage={statisticalData.percentage[3]}
-//                 />,
-//                 <StatisticItem
-//                 key = {statisticalData.id[4]}
-//                 label={statisticalData.label[4]}
-//                 percentage={statisticalData.percentage[4]}
-//                 />,
-//                 <StatisticItem
-//                 key = {statisticalData.id[5]}
-//                 label={statisticalData.label[5]}
-//                 percentage={statisticalData.percentage[5]}
-//                 />,  */}
-//             </li>
-//             )}
-//        </ul>
-//     )
-// }
+const Statistics = ({ title, stats }) => {
+  return (
+    <section className="statistics">
+      <h2 className="title">{title}</h2>
 
-// export default Statistics;
+      <ul className="stat-list">
+        {stats.map(({ id, label, percentage }) => (
+          <li key={id} className="item">
+            <span className="label">{label}</span>
+            <span className="percentage">{percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    }),
+  ),
+};
+
+export default Statistics;
