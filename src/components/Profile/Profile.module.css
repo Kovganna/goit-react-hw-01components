@@ -4,7 +4,6 @@
   height: 400px;
   background-color: var(--cart-background);
   box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
-  /* outline: 1px solid tomato; */
 }
 
 .description {
@@ -47,14 +46,16 @@
   background-color: var(--stats-background);
 }
 
-.stats__item {
+.statsFollowers,
+.statsViews,
+.statsLikes {
   border-top: 1px solid var(--info-color);
   border-left: 1px solid var(--info-color);
   border-bottom: 1px solid var(--info-color);
   color: var(--text-color);
 }
 
-.stats__item:last-child {
+.statsLikes {
   border-right: 1px solid var(--info-color);
 }
 
@@ -75,13 +76,13 @@
   font-style: bold;
 }
 
-.followers {
+.statsFollowers {
   padding-right: 14px;
   padding-left: 14px;
 }
 
-.likes,
-.views {
-  padding-right: 28px;
+.statsLikes,
+.statsViews {
+  padding-right: 27px;
   padding-left: 28px;
 }
