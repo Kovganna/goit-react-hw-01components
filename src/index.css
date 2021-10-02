@@ -7,7 +7,8 @@
   --stats-background: #d6d5d5;
   --image-border: #000;
   --text-color: #000;
-  --stats-color: #252525e;
+  --stats-color: #252525;
+  --head-bg-color: #29dcdc;
 }
 
 body {
