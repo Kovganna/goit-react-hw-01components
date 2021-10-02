@@ -1,9 +1,9 @@
 .statistics {
   margin: 5% 40%;
   width: 400px;
-  background-color: var(--cart-background);
-  box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
 }
+background-color: var(--cart-background);
+box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
 
 .title {
   padding: 25px;
