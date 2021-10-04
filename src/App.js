@@ -1,11 +1,11 @@
 import './App.css';
-import user from './components/Profile/user.json';
+import user from './json/user.json';
 import Profile from './components/Profile/Profile';
-import statisticalData from './components/Statistics/statistical-data.json';
+import statisticalData from './json/statistical-data.json';
 import Statistics from './components/Statistics/Statistics';
-import friends from './components/FriendList/friends.json';
+import friends from './json/friends.json';
 import FriendList from './components/FriendList/FriendList';
-import transactions from './components/Transactions/transactions.json';
+import transactions from './json/transactions.json';
 import TransactionHistory from './components/Transactions/TransactionHistory';
 
 const App = () => {
@@ -16,9 +16,7 @@ const App = () => {
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
 
       <Statistics title="Upload stats" stats={statisticalData} />

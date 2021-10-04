@@ -6,9 +6,7 @@ const Profile = ({
   tag,
   location,
   avatar,
-  followers,
-  views,
-  likes,
+  stats: { followers, views, likes },
 }) => {
   return (
     <div className={style.profile}>
@@ -39,13 +37,13 @@ const Profile = ({
 
 Profile.propTypes = {
   userName: PropTypes.string.isRequired,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  stats: PropTypes.shape({
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
-  }),
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Profile;
